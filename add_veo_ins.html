@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INSCRIPCIONES PARA VIGILIANCIA EPIDEMIOLOGICA DE ORGANOFOSFORADOS DEPARTAMENTAL</title>
+    <style>
+        /* Estilos para la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            /* Combina los bordes de las celdas */
+            border: 1px solid #ddd;
+            /* Borde delgadp alrededor de la tabla */
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Estilos para el formulario */
+        form {
+            max-width: 800px;
+            /* Ancho máximo del formulario */
+            margin: 20px auto;
+            /* Centrar el formulario */
+            padding: 20px;
+            border: 1px solid #ddd;
+            /* Borde alrededor del formulario */
+            border-radius: 5px;
+        }
+
+        /* Tooltip container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+            /* If you want dots under the hoverable text */
+        }
+
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 5px;
+            border-radius: 6px;
+
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        /* Estilo del botón de cierre de sesión */
+        .logout-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #ff4d4d;
+            /* Color de fondo rojo */
+            color: #fff;
+            /* Color del texto blanco */
+            text-align: center;
+            text-decoration: none;
+            /* Elimina el subrayado del enlace */
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .razonS {
+            width: 600px;
+        }
+
+        .cual {
+            width: 400px;
+        }
+
+        .dir_est {
+            width: 400px;
+        }
+
+        .obj_comer {
+            width: 400px;
+        }
+
+        .inscripcion {
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <h2>FORMATO DE INSCRIPCION OBJETOS DE INSPECCION, VIGILANCIA Y CONTROL SANITARIO</h2>
+    </center>
+    <form action="add_veo_ins.php" method="post">
+        <table>
+
+            <tr>
+                <td><label for="fecha">Fecha:</label></td>
+                <td colspan="2"><input type="date" id="fecha" name="fecha" readonly></td>
+            </tr>
+
+        </table>
+        <br>
+        <!-- IDENTIFICACION DE OBJETO -->
+        <table>
+            <tr>
+                <td><label for="tipo_de_establecimiento">Tipo de establecimiento:</label></td>
+                <td colspan="2">
+                    <select id="tipo_de_establecimiento" name="tipo_de_establecimiento">
+                        <option value=""></option>
+                        <option value="carcelario">Carcelario</option>
+                        <option value="industriales">Industriales</option>
+                        <option value="hospitalario y similares">Hospitalario y similares</option>
+                        <option value="cuartelarios">Cuartelarios</option>
+                        <option value="vivienda permanente">Vivienda permanente</option>
+                        <option value="de espectaculo publico">De espectaculo público</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="acueductos">Acueductos</option>
+                        <option value="vivienda transitoria">Vivienda transitoria</option>
+                        <option value="diversion publica">Diversion publica</option>
+                        <option value="educativos">Educativos</option>
+                        <option value="puntos de entrada, terminales portuarios y actividades conexas">Puntos de
+                            entrada, terminales portuarios y actividades conexas</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="nombre_comercial_del_objeto">Nombre del objeto comercial:</label></td>
+                <td colspan="2"><input class="obj_comer" type="text" id="nombre_comercial_del_objeto"
+                        name="nombre_comercial_del_objeto" maxlength="100">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="departamento">Departamento:</label></td>
+                <td colspan="2"><input type="text" id="departamento" name="departamento" value="Sucre" readonly></td>
+            </tr>
+
+            <tr>
+                <td><label for="municipio">Municipio:</label></td>
+                <td colspan="2">
+                    <select id="municipio" name="municipio">
+                        <option value=""></option>
+                        <option value="Buenavista">Buenavista</option>
+                        <option value="Caimito">Caimito</option>
+                        <option value="Chalan">Chalán</option>
+                        <option value="Coloso">Coloso</option>
+                        <option value="Corozal">Corozal</option>
+                        <option value="Coveñas">Coveñas</option>
+                        <option value="El Roble">El Roble</option>
+                        <option value="Galeras">Galeras</option>
+                        <option value="Guaranda">Guaranda</option>
+                        <option value="La Union">La Unión</option>
+                        <option value="Los Palmitos">Los Palmitos</option>
+                        <option value="Majagual">Majagual</option>
+                        <option value="Morroa">Morroa</option>
+                        <option value="Ovejas">Ovejas</option>
+                        <option value="Palmito">Palmito</option>
+                        <option value="San Benito Abad">San Benito Abad</option>
+                        <option value="San Juan de Betulia">San Juan de Betulia</option>
+                        <option value="San Marcos">San Marcos</option>
+                        <option value="San Onofre">San Onofre</option>
+                        <option value="San Pedro">San Pedro</option>
+                        <option value="Sampues">Sampués</option>
+                        <option value="Sincelejo">Sincelejo</option>
+                        <option value="Since">Sincé</option>
+                        <option value="Sucre">Sucre</option>
+                        <option value="Santiago de Tolu">Santiago de Tolú</option>
+                        <option value="Tolu Viejo">Tolú Viejo</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- <tr>
+                <td><label for="fecha">Número de inscripción</label></td>
+                <td colspan="2"><input type="number" id="numero_de_inscripcion" name="numero_de_inscripcion"
+                        maxlength="50" readonly>
+                </td>
+            </tr> -->
+
+            <tr>
+                <td><label for="lugar_del_establecimiento">Lugar del establecimiento:</label></td>
+                <td colspan="2">
+                    <select id="lugar_del_establecimiento" name="lugar_del_establecimiento">
+                        <option value=""></option>
+                        <option value="barrio">Barrio</option>
+                        <option value="vereda">Vereda</option>
+                        <option value="comuna">Comuna</option>
+                        <option value="localidad">Localidad</option>
+                        <option value="sector">Sector</option>
+                        <option value="corregimiento">Corregimiento</option>
+                        <option value="caserio">Caserio</option>
+                        <option value="UPZ">UPZ</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="otro">Otro lugar del establecimiento</label></td>
+                <td><input type="checkbox" id="otro" name="otro" value="si"></td>
+            </tr>
+
+            <tr>
+                <td><label for="cual">¿Cuál?</label></td>
+                <td colspan="2"><input class="cual" type="text" id="cual" name="cual" maxlength="100"></td>
+            </tr>
+
+            <tr>
+                <td><label for="direccion_establecimiento">Direccion de establecimiento:</label></td>
+                <td colspan="2"><input class="dir_est" type="text" id="direccion_establecimiento"
+                        name="direccion_establecimiento" maxlength="100"></td>
+            </tr>
+
+            <tr>
+                <td><label for="telefono_establecimiento">Telefono de establecimiento:</label></td>
+                <td colspan="2"><input type="number" id="telefono_establecimiento" name="telefono_establecimiento"
+                        maxlength="50"></td>
+            </tr>
+        </table>
+        <br>
+        <!-- NUMERO DE INSCRIPCION -->
+
+        <table>
+            <tr>
+                <td><label for="fecha">Número de inscripción</label></td>
+                <td colspan="2"><input class="inscripcion" type="number" id="numero_de_inscripcion"
+                        name="numero_de_inscripcion" maxlength="50" readonly>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <!-- DATOS DEL REPRESENTANTE LEGAL Y/O PROPIETARIO -->
+        <table>
+            <tr>
+                <td><label for="tipo_de_persona">Tipo de persona:</label></td>
+                <td colspan="2"><select id="tipo_de_persona" name="tipo_de_persona">
+                        <option value="persona natural">Persona natural</option>
+                        <option value="persona juridica">Persona juridica</option>
+                    </select></td>
+            </tr>
+
+            <tr>
+                <td><label for="primer_apellido">Primer apellido:</label></td>
+                <td colspan="2"><input type="text" id="primer_apellido" name="primer_apellido" maxlength="50"></td>
+            </tr>
+
+            <tr>
+                <td><label for="segundo_apellido">Segundo apellido:</label></td>
+                <td colspan="2"><input type="text" id="segundo_apellido" name="segundo_apellido" maxlength="50"></td>
+            </tr>
+
+            <tr>
+                <td><label for="nombres">Nombres:</label></td>
+                <td colspan="2"><input type="text" id="nombres" name="nombres" maxlength="50"></td>
+            </tr>
+
+            <tr>
+                <td><label for="documento_de_identificacion">Documento de identificación:</label></td>
+                <td colspan="2"><select id="documento_de_identificacion" name="documento_de_identificacion">
+                        <option value="c.c">Cedula de ciudadania</option>
+                        <option value="c.e">Cedula extranjería</option>
+                        <option value="nit">NIT</option>
+                    </select></td>
+            </tr>
+
+            <tr>
+                <td><label for="numero_de_documento">Número del documento:</label></td>
+                <td colspan="2"><input type="number" id="numero_de_documento" name="numero_de_documento" maxlength="50"
+                        required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="direccion_de_notificacion">Dirección de notificación:</label></td>
+                <td colspan="2"><input type="text" id="direccion_de_notificacion" name="direccion_de_notificacion"
+                        maxlength="100">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="telefonos">Telefonos:</label></td>
+                <td colspan="2"><input type="number" id="telefonos" name="telefonos" maxlength="50">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="correo_electronico_propietario">Correo electrónico:</label></td>
+                <td colspan="2"><input type="text" id="correo_electronico_propietario"
+                        name="correo_electronico_propietario" maxlength="100">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <!-- EXCLUSIVO PARA LA ENTIDAD TERRITORIAL DE SALUD -->
+        <table>
+            <tr>
+                <td><label for="el_establecimiento_inspeccionado_por_entidad_salud">¿El establecimiento ha sido
+                        inspeccionado por la entidad territorial de salud?</label></td>
+                <td colspan="2"><select id="el_establecimiento_inspeccionado_por_entidad_salud"
+                        name="el_establecimiento_inspeccionado_por_entidad_salud">
+                        <option value="no">No</option>
+                        <option value="si">Si</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="fecha_de_ultima_inspeccion">Fecha de útima inspección (dd-mm-aaaa):</label></td>
+                <td colspan="2"><input type="text" id="fecha_de_ultima_inspeccion" name="fecha_de_ultima_inspeccion"
+                        maxlength="10">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="ultimo_concepto_sanitario">Ultimo concepto sanitario:</label></td>
+                <td colspan="2"><input type="text" id="ultimo_concepto_sanitario" name="ultimo_concepto_sanitario"
+                        maxlength="100">
+                </td>
+            </tr>
+
+        </table>
+
+        <br>
+        <!-- DURACION Y TIEMPO DESTINADO PARA LA EJECUCION DE ACTIVIDADES -->
+
+        <table>
+            <tr>
+                <td>Jornada laboral</td>
+            </tr>
+        </table>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="2">Dias laborales</td>
+                    <td colspan="2">Horario laboral</td>
+                </tr>
+                <tr>
+                    <td><select id="dia_laboral_1" name="dia_laboral_1">
+                            <option value=""></option>
+                            <option value="lunes">Lunes</option>
+                            <option value="martes">Martes</option>
+                            <option value="miercoles">Miércoles</option>
+                            <option value="jueves">Jueves</option>
+                            <option value="viernes">Viernes</option>
+                            <option value="sabado">Sábado</option>
+                            <option value="domingo">Domingo</option>
+                        </select></td>
+
+                    <td><select id="dia_laboral_2" name="dia_laboral_2">
+                            <option value=""></option>
+                            <option value="lunes">Lunes</option>
+                            <option value="martes">Martes</option>
+                            <option value="miercoles">Miércoles</option>
+                            <option value="jueves">Jueves</option>
+                            <option value="viernes">Viernes</option>
+                            <option value="sabado">Sábado</option>
+                            <option value="domingo">Domingo</option>
+                        </select></td>
+
+                    <td colspan="2"><input type="time" id="hora_laboral_1" name="hora_laboral_1"></td>
+                    <td colspan="2"><input type="time" id="hora_laboral_2" name="hora_laboral_2"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <table>
+            <tr>
+                <td>Jornada laboral 2</td>
+            </tr>
+        </table>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="2">Dias laborales</td>
+                    <td colspan="2">Horario laboral</td>
+                </tr>
+                <tr>
+                    <td><select id="dia_laboral_3" name="dia_laboral_3">
+                            <option value=""></option>
+                            <option value="lunes">Lunes</option>
+                            <option value="martes">Martes</option>
+                            <option value="miercoles">Miércoles</option>
+                            <option value="jueves">Jueves</option>
+                            <option value="viernes">Viernes</option>
+                            <option value="sabado">Sábado</option>
+                            <option value="domingo">Domingo</option>
+                        </select></td>
+
+                    <td><select id="dia_laboral_4" name="dia_laboral_4">
+                            <option value=""></option>
+                            <option value="lunes">Lunes</option>
+                            <option value="martes">Martes</option>
+                            <option value="miercoles">Miércoles</option>
+                            <option value="jueves">Jueves</option>
+                            <option value="viernes">Viernes</option>
+                            <option value="sabado">Sábado</option>
+                            <option value="domingo">Domingo</option>
+                        </select></td>
+
+                    <td colspan="2"><input type="time" id="hora_laboral_3" name="hora_laboral_3"></td>
+                    <td colspan="2"><input type="time" id="hora_laboral_4" name="hora_laboral_4"></td>
+                </tr>
+            </tbody>
+        </table>
+        <BR>
+        <!-- EXCLUSIVO PARA LA ENTIDAD TERRITORIAL DE SALUD -->
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="establecimiento_inspeccionado_entidad_territorial_salud">¿El establecimiento ha sido
+                            inspeccionado por la entidad territorial de salud?</label></td>
+                    <td colspan="2"><select id="establecimiento_inspeccionado_entidad_territorial_salud"
+                            name="establecimiento_inspeccionado_entidad_territorial_salud">
+                            <option value="no">No</option>
+                            <option value="si">Si</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="fecha_de_ultima_inspeccion_2">Fecha de la ultima inspección (dd-mm-aaaa)</label>
+                    </td>
+                    <td colspan="2"><input type="text" id="fecha_de_ultima_inspeccion_2"
+                            name="fecha_de_ultima_inspeccion_2" maxlength="10"></td>
+
+                    <td><label for="ultimo_concepto_sanitario_emitio">Ultimo concepto sanitario emitido</label></td>
+                    <td colspan="2"><input type="text" id="ultimo_concepto_sanitario_emitio"
+                            name="ultimo_concepto_sanitario_emitio"></td>
+                </tr>
+            </tbody>
+        </table>
+        <BR>
+        <!-- RESPONSABLE DEL DILIGENCIAMIENTO DE LA INFORMACION -->
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="nombre">Nombre</label></td>
+                    <td colspan="2"><input type="text" id="nombre" name="nombre"></td>
+
+                    <td><label for="nombre_2">Nombre</label></td>
+                    <td colspan="2"><input type="text" id="nombre_2" name="nombre_2"></td>
+                </tr>
+                <tr>
+                    <td><label for="cedula">Cedula</label></td>
+                    <td colspan="2"><input type="text" id="cedula" name="cedula"></td>
+
+                    <td><label for="cedula_2">Cedula</label></td>
+                    <td colspan="2"><input type="text" id="cedula_2" name="cedula_2"></td>
+                </tr>
+                <tr>
+                    <td><label for="cargo">Cargo</label></td>
+                    <td colspan="2"><input type="text" id="cargo" name="cargo"></td>
+
+                    <td><label for="cargo_2">Cargo</label></td>
+                    <td colspan="2"><input type="text" id="cargo_2" name="cargo_2"></td>
+                </tr>
+                <tr>
+                    <td><label for="telefono">Telefono</label></td>
+                    <td colspan="2"><input type="number" id="telefono" name="telefono"></td>
+
+                    <td><label for="telefono_2">Telefono</label></td>
+                    <td colspan="2"><input type="number" id="telefono_2" name="telefono_2"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><button type="submit">Registrar</button></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Obtener el campo de fecha
+            const fechaInput = document.getElementById('fecha');
+
+            // Crear un objeto Date para obtener la fecha actual
+            const today = new Date();
+
+            // Formatear la fecha en el formato YYYY-MM-DD
+            const year = today.getFullYear();
+            const month = ('0' + (today.getMonth() + 1)).slice(-2); // Meses de 0 a 11, por eso se suma 1
+            const day = ('0' + today.getDate()).slice(-2); // Días del mes, siempre de 2 dígitos
+
+            const formattedDate = `${year}-${month}-${day}`;
+
+            // Asignar la fecha actual al campo de fecha
+            fechaInput.value = formattedDate;
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const municipioSelect = document.getElementById('municipio');
+            const numeroDocumentoInput = document.getElementById('numero_de_documento');
+            const numeroInscripcionInput = document.getElementById('numero_de_inscripcion');
+
+            // Mapa de códigos de inscripción por municipio
+            const inscripcionMap = {
+                "Buenavista": "70110",
+                "Caimito": "70124",
+                "Chalan": "70230",
+                "Coloso": "70204",
+                "Corozal": "70215",
+                "Coveñas": "70221",
+                "El Roble": "70233",
+                "Galeras": "70235",
+                "Guaranda": "70265",
+                "La Union": "70400",
+                "Los Palmitos": "70418",
+                "Majagual": "70429",
+                "Morroa": "70473",
+                "Ovejas": "70508",
+                "Palmito": "70523",
+                "San Benito Abad": "70670",
+                "San Juan de Betulia": "70702",
+                "San Marcos": "70708",
+                "San Onofre": "70713",
+                "San Pedro": "70717",
+                "Sampues": "70678",
+                "Sincelejo": "70001",
+                "Since": "70742",
+                "Sucre": "70771",
+                "Santiago de Tolu": "70820",
+                "Tolu Viejo": "70823"
+            };
+
+            // Función para actualizar el número de inscripción basado en el municipio y el número de documento
+            function updateNumeroInscripcion() {
+                const selectedMunicipio = municipioSelect.value;
+                const numeroDocumento = numeroDocumentoInput.value;
+
+                const municipioCodigo = inscripcionMap[selectedMunicipio] || '';
+                const numeroInscripcion = municipioCodigo + numeroDocumento;
+
+                numeroInscripcionInput.value = numeroInscripcion;
+            }
+
+            // Añadir eventos de cambio al select y al input
+            municipioSelect.addEventListener('change', updateNumeroInscripcion);
+            numeroDocumentoInput.addEventListener('input', updateNumeroInscripcion);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Selecciona los campos específicos por su ID
+            var telefonoEstablecimiento = document.querySelector('#telefono_establecimiento');
+            var numeroDeDocumento = document.querySelector('#numero_de_documento');
+            var telefonos = document.querySelector('#telefonos');
+            var cedula = document.querySelector('#cedula');
+            var cedula2 = document.querySelector('#cedula_2');
+            var telefono = document.querySelector('#telefono');
+            var telefono2 = document.querySelector('#telefono_2');
+
+            // Asigna el valor 0 a cada campo
+            telefonoEstablecimiento.value = 0;
+            cedula.value = 0;
+            cedula2.value = 0;
+            telefonos.value = 0;
+            telefono.value = 0;
+            telefono2.value = 0;
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Selecciona el checkbox y el campo de texto
+            var checkbox = document.querySelector('#otro');
+            var cualInput = document.querySelector('#cual');
+
+            // Función para habilitar o deshabilitar el campo de texto
+            function toggleCual() {
+                cualInput.disabled = !checkbox.checked;
+            }
+
+            // Configura el evento de cambio para el checkbox
+            checkbox.addEventListener('change', toggleCual);
+
+            // Inicializa el estado del campo de texto al cargar la página
+            toggleCual();
+        });
+
+    </script>
+
+</body>
+
+</html>
