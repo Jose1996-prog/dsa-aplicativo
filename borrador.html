@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensión de Salud Ambiental - Departamento de Sucre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            font-size: smaller;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        main img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            background-color: inherit;
+            border: none;
+            outline: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        section {
+            width: 70%;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        aside {
+            width: 25%;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 2px solid #4CAF50;
+            /* Border color to match header */
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-indicators {
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            left: 0;
+        }
+
+        .carousel-indicators span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 3px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .carousel-indicators .active {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="Title img.jpeg">
+        <h1>Salud Ambiental</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Calidad agua</a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_calidad_agua.html">IVC</a>
+                    <a href="../amb_1_index/Ins_calidad_agua.html">Inscripciones</a>
+                    <a href="#">Normatividad</a>
+                    <a href="#">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Alimentos y bebidas</a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_alimentos_y_bebidas.html">IVC</a>
+                    <a href="../amb_1_index/Ins_alimentos.html">Inscripciones</a>
+                    <a href="#">Normatividad</a>
+                    <a href="#">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Saneamiento basico</a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_saneamiento.html">IVC</a>
+                    <a href="../amb_1_index/Ins_saneamiento.html">Inscripciones</a>
+                    <a href="#">Normatividad</a>
+                    <a href="#">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Sustancias quimicas</a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_sustancias_quimicas.html">IVC</a>
+                    <a href="../amb_1_index/Ins_sustancias.html">Inscripciones</a>
+                    <a href="#">Normatividad</a>
+                    <a href="#">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">V.E.O</a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_veo.html">IVC</a>
+                    <a href="../amb_1_index/Ins_veo.html">Inscripciones</a>
+                    <a href="#">Normatividad</a>
+                    <a href="#">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Zoonosis</a>
+                <div class="dropdown-content">
+                    <a href="../amb_agua/add_agua.php">IVC</a>
+                    <a href="#">Inscripciones</a>
+                    <a href="#">Normatividad</a>
+                    <a href="#">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Entorno saludable</a>
+                <div class="dropdown-content">
+                    <a href="../amb_agua/add_agua.php">IVC</a>
+                    <a href="#">Normatividad</a>
+                    <a href="#">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Produccion limpia</a>
+                <div class="dropdown-content">
+                    <a href="../amb_agua/add_agua.php">IVC</a>
+                    <a href="#">Normatividad</a>
+                    <a href="#">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Cambio climatico</a>
+                <div class="dropdown-content">
+                    <a href="../amb_agua/add_agua.php">IVC</a>
+                    <a href="#">Normatividad</a>
+                    <a href="#">Indicadores</a>
+                </div>
+            </li>
+
+            <li><a href="Inicio_PQRS.html">PQRS</a></li>
+        </ul>
+    </nav>
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="https://via.placeholder.com/800x400?text=Imagen+1" alt="Imagen 1" class="carousel-image">
+            <img src="https://via.placeholder.com/800x400?text=Imagen+2" alt="Imagen 2" class="carousel-image">
+            <img src="https://via.placeholder.com/800x400?text=Imagen+3" alt="Imagen 3" class="carousel-image">
+        </div>
+        <div class="carousel-indicators">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <article>
+                <h2>Artículo Principal 1</h2>
+                <p>Este es el contenido principal del primer artículo. Aquí puedes incluir más detalles sobre tu tema de
+                    interés, junto con texto, imágenes o enlaces adicionales.</p>
+            </article>
+            <article>
+                <h2>Artículo Principal 2</h2>
+                <p>Este es el contenido principal del segundo artículo. Aquí puedes incluir más detalles sobre tu tema
+                    de interés, junto con texto, imágenes o enlaces adicionales.</p>
+            </article>
+            <article>
+                <h2>Artículo Principal 3</h2>
+                <p>Este es el contenido principal del tercer artículo. Aquí puedes incluir más detalles sobre tu tema de
+                    interés, junto con texto, imágenes o enlaces adicionales.</p>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Enlaces Relacionados</h2>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Departamento de Salud Ambiental - Sucre © 2024</p>
+    </footer>
+
+    <script>
+        const carousel = document.querySelector('.carousel-images');
+        const indicators = document.querySelectorAll('.carousel-indicators span');
+        let index = 0;
+
+        function showNextImage() {
+            index = (index + 1) % indicators.length;
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+        }
+
+        setInterval(showNextImage, 4000); // Cambiar imagen cada 4 segundos
+    </script>
+</body>
+
+</html>

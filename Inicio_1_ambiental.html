@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Ambiental - Departamento de Sucre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FCFCFC;
+            color: #333;
+        }
+
+        .titulo {
+            font-family: 'Arial Black', Arial, sans-serif;
+            color: #4CAF50;
+        }
+
+        .justificado {
+            text-align: justify;
+        }
+
+        header {
+            background-color: #FCFCFC;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* 62e467 */
+        nav {
+            background-color: #2c8fff;
+            font-size: smaller;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        main img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #2c8fff;
+            color: white;
+            text-align: center;
+            padding: 0.5px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            background-color: inherit;
+            border: none;
+            outline: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        section {
+            width: 70%;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .img_event {
+            width: 700px;
+            height: auto;
+        }
+
+        .img_event_2 {
+            width: 700px;
+            height: auto;
+        }
+
+        .img_event_3 {
+            width: 700px;
+            height: auto;
+        }
+
+        aside {
+            width: 25%;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+        }
+
+        .weather_img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .carrusel {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .imagenes {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .imagen {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .boton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .izquierda {
+            left: 10px;
+        }
+
+        .derecha {
+            right: 10px;
+        }
+
+        #fecha-hora {
+            font-size: 1.2em;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+    </style>
+
+    <link rel="icon" href="../img_amb/Escudo_de_Sucre.svg.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img src="../img_amb/Secretaria de Salud 1.2.jpg" width="1000" height="300">
+        <h1 class="titulo">SALUD AMBIENTAL</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><img src="../img_amb/logo calidad del agua sin fondo.png"
+                        width="100" height="50"></a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_calidad_agua.html">IVC</a>
+                    <a href="../amb_1_index/Ins_calidad_agua.html">Inscripciones</a>
+                    <a href="../amb_1_index/normatividad_agua.html">Normatividad</a>
+                    <a href="../amb_1_index/indicadores_agua.html">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><img src="../img_amb/logo alimentos sin fondo.png"
+                        width="100" height="50"></a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_alimentos_y_bebidas.html">IVC</a>
+                    <a href="../amb_1_index/Ins_alimentos.html">Inscripciones</a>
+                    <a href="../amb_1_index/normatividad_alimentos.html">Normatividad</a>
+                    <a href="../amb_1_index/indicadores_alimentos_bebidas.html">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><img src="../img_amb/Saneamiento Basico sin fondo.png"
+                        width="100" height="50"></a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_saneamiento.html">IVC</a>
+                    <a href="../amb_1_index/Ins_saneamiento.html">Inscripciones</a>
+                    <a href="../amb_1_index/normatividad_saneamiento.html">Normatividad</a>
+                    <a href="../amb_1_index/indicadores_saneamiento.html">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><img src="../img_amb/logo sustancias sin fondo.png"
+                        width="100" height="50"></a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_sustancias_quimicas.html">IVC</a>
+                    <a href="../amb_1_index/Ins_sustancias.html">Inscripciones</a>
+                    <a href="../amb_1_index/normatividad_sustancias_quimicas.html">Normatividad</a>
+                    <a href="../amb_1_index/indicadores_sustancias_quimicas.html">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><img src="../img_amb/VEO sin fondo.png" width="100"
+                        height="50"></a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_veo.html">IVC</a>
+                    <a href="../amb_1_index/Ins_veo.html">Inscripciones</a>
+                    <a href="../amb_1_index/normatividad_veo.html">Normatividad</a>
+                    <a href="../amb_1_index/indicadores_veo.html">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><img src="../img_amb/logo zoonosis sin fondo.png"
+                        width="100" height="50"></a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_zoonosis.html">IVC</a>
+                    <a href="../amb_1_index/Ins_zoonosis.html">Inscripciones</a>
+                    <a href="../amb_1_index/normatividad_zoonosis.html">Normatividad</a>
+                    <a href="../amb_1_index/indicadores_zoonosis.html">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><img src="../img_amb/Entorno saludable sin fondo.png"
+                        width="100" height="50"></a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_entorno_saludable.html">Caracterizaciones</a>
+                    <a href="../amb_1_index/normatividad_entorno_saludable.html">Normatividad</a>
+                    <a href="../amb_1_index/indicadores_entorno_saludable.html">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><img src="../img_amb/Produccion Limpia.png" width="100"
+                        height="50"></a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_produccion_limpia.html">Capacitaciones y Asistencia tecnica</a>
+                    <a href="../amb_1_index/normatividad_produccion_limpia.html">Normatividad</a>
+                    <a href="../amb_1_index/indicadores_produccion_limpia.html">Indicadores</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><img src="../img_amb/logo cambio climatico sin fondo.png"
+                        width="100" height="50"></a>
+                <div class="dropdown-content">
+                    <a href="../amb_1_index/Inicio_cambio_climatico.html">Capacitaciones y Asistencia tecnica</a>
+                    <a href="../amb_1_index/normatividad_cambio_climatico.html">Normatividad</a>
+                    <a href="../amb_1_index/indicadores_cambio_climatico.html">Indicadores</a>
+                </div>
+            </li>
+
+            <!-- <li><a href="Inicio_PQRS.html">PQRS</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="carrusel">
+        <div class="imagenes" id="imagenes">
+            <img src="../img_amb/BannerAnimalesRabia.jpg" alt="Imagen 1" class="imagen">
+            <img src="../img_amb/BannerListados1.png" alt="Imagen 2" class="imagen">
+            <img src="../img_amb/BannerUsoMedica8.png" alt="Imagen 3" class="imagen">
+        </div>
+        <button class="boton izquierda" onclick="moverIzquierda()">&#10094;</button>
+        <button class="boton derecha" onclick="moverDerecha()">&#10095;</button>
+    </div>
+
+    <main>
+        <section>
+            <article>
+                <h2>EVENTOS SALUD AMBIENTAL</h2>
+                <img class="img_event" src="../img_amb/15433_conmemoracion-dia-mundial-contra-la-rabia_1024x600.jpeg">
+                <p class="justificado">
+                    <strong>CONMEMORACIÓN DÍA MUNDIAL CONTRA LA RABIA.</strong>
+                    <br><br>
+                    En el marco de la conmemoración del Día Mundial contra la Rabia, el 27 y 29 de septiembre de 2024,
+                    la secretaría de Salud Departamental, a través del programa de Zoonosis, llevó a cabo jornadas con
+                    diversas actividades dirigidas a la concientización de la población, tales como mensajes educativos,
+                    caminatas y concursos. Además, se habilitaron puntos fijos para la vacunación gratuita de perros y
+                    gatos y consultorio veterinario con el objetivo de reforzar la prevención del virus y promover el
+                    bienestar de las mascotas y la seguridad de la comunidad.
+                    <br><br>
+                    <img class="img_event_2" src="../img_amb/mesa-tecnica-cotsa-de-sustancias-quimicas-y-residuos.jpeg">
+                    <br><strong>MESA TÉCNICA COTSA DE SUSTANCIAS QUÍMICAS Y RESIDUOS PELIGROSOS</strong>
+                    <br><br>
+                    En el marco del Consejo Territorial de Salud Ambiental (COTSA) el pasado 27 de septiembre de 2024,
+                    la Secretaría de Salud Departamental de Sucre llevó a cabo una mesa técnica del Comité Técnico de
+                    Sustancias Químicas y Residuos Peligrosos en las instalaciones de esta dependencia, en su sala
+                    situacional. Durante la reunión, se discutieron problemáticas claves sobre el manejo de sustancias
+                    químicas y la gestión de residuos peligrosos en el departamento. Los puntos centrales del debate
+                    incluyeron los riesgos asociados a la minería en Toluviejo y al uso de pinturas y solventes en
+                    Sampués, dos sectores donde se ha identificado un manejo deficiente de químicos que afecta tanto la
+                    seguridad de los trabajadores como el medio ambiente.
+                    <br><br>
+                    <img class="img_event_3"
+                        src="../img_amb/15391_intervencion-salud-ambiental-en-segundo-consejo-departamental-332892_1024x600.jpeg">
+                    <br><strong>Intervención Salud Ambiental en segundo Consejo Departamental de Política Social
+                        2024</strong>
+                    <br><br>
+                    El día 26 de septiembre de 2024 se realiza intervención por parte del Referente de Salud Ambiental
+                    de la secretaria de Salud departamental, Luis Fernando Pérez Monterroza, en el marco del segundo
+                    consejo departamental de política social 2024, socializando los resultados en materia de calidad de
+                    agua y saneamiento básico en el departamento de Sucre en lo que corresponde al periodo entre enero y
+                    agosto de 2024. En esta actividad se dieron a conocer aspectos relacionados con el Índice de riesgo
+                    de calidad de agua para consumo humano (IRCA) siendo este para el departamento de 16,93 con un nivel
+                    de riesgo medio, señalando otros indicadores y estableciendo en este espacio de articulación
+                    acciones para fortalecer estos aspectos descritos.
+                </p>
+            </article>
+
+            <img src="../img_amb/ejemplo_2024_10.jpg" alt="">
+
+            <article>
+                <h2>TRAMITES ADMINISTRATIVOS SALUD AMBIENTAL</h2>
+                <p>Resolución 423 de 2023.
+                    <br>
+                    <br><br>
+                    <a
+                        href="https://saludsucre.micolombiadigital.gov.co/sites/saludsucre/content/files/000227/11330_resolucion-423-de-16-de-mayo-de-2023-tarifas-por-gestion-administrativa-sidevass-2.pdf">Da
+                        click aquí para descargar resolución.</a>
+                </p>
+            </article>
+            <article>
+                <h2>DOCUMENTOS GENERALES EN SALUD AMBIENTAL</h2>
+                <p>MODELO OPERATIVO DE INSPECCIÓN, VIGILANCIA Y CONTROL SANITARIO PARA SALUD AMBIENTAL
+                    <br><br>
+                    <a href="https://www.minsalud.gov.co/salud/publica/ambiental/Paginas/Salud-ambiental.aspx">ORIENTACIONES
+                        OPERATIVAS EN SALUD AMBIENTAL MSPS.</a>
+
+                </p>
+            </article>
+        </section>
+
+        <aside>
+
+            <a href="https://www.clima.com/colombia/sucre/sucre">
+                <img class="weather_img" src="../img_amb/daytime.png">
+            </a>
+            <a href="https://www.tutiempo.net/indice-ultravioleta/colombia/sucre.html">
+                <img class="weather_img" src="../img_amb/UV icon.png">
+            </a>
+            <a
+                href="https://www.accuweather.com/es/co/sincelejo/106776/air-quality-index/106776#:~:text=La%20calidad%20del%20aire%20es%20id%C3%B3nea%20para%20la%20mayor%C3%ADa%20de,al%20aire%20libre%20con%20normalidad.&text=20%20%2D%2049-,La%20calidad%20del%20aire%20es%20generalmente%20aceptable%20para%20la%20mayor%C3%ADa,la%20exposici%C3%B3n%20a%20largo%20plazo.">
+                <img class="weather_img" src="../img_amb/calidad-del-aire.png">
+            </a>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <tr>
+                    <th
+                        style="font-size: larger; padding: 15px; text-align: center; background-color: #2c8fff; color: white;">
+                        Sucre Hoy
+                    </th>
+                </tr>
+                <tr>
+                    <td id="fecha-hora"
+                        style="padding: 15px; text-align: center; font-size: 1.5em; border: 1px solid #ddd;"></td>
+                </tr>
+            </table>
+
+            <a href="../calendario.html">
+                <img src="../img_amb/pngwing.com.png" width="50" height="50">
+                <div style="font-size: 14px; margin-top: 5px; text-align: center;">Presiona en el calendario y podras
+                    ver los eventos programados</div>
+            </a>
+
+            <h2>Enlaces Relacionados</h2>
+            <br>
+            <a href="#"><img class="weather_img" src="../img_amb/toppng.com-facebook-green-256x256.png">
+            </a>
+
+            <a href="#"><img class="weather_img" src="../img_amb/twitter-x-256.png">
+            </a>
+
+            <a href="#"><img class="weather_img" src="../img_amb/pngegg.png">
+            </a>
+
+        </aside>
+    </main>
+
+    <footer>
+        <p>Departamento de Salud Ambiental - Sucre © 2024</p>
+    </footer>
+
+    <script>
+
+        let index = 0;
+        const imagenes = document.getElementById('imagenes');
+        const totalImagenes = document.querySelectorAll('.imagen').length;
+
+        function moverIzquierda() {
+            index = (index > 0) ? index - 1 : totalImagenes - 1;
+            actualizarCarrusel();
+        }
+
+        function moverDerecha() {
+            index = (index < totalImagenes - 1) ? index + 1 : 0;
+            actualizarCarrusel();
+        }
+
+        function actualizarCarrusel() {
+            const desplazamiento = -index * 100;
+            imagenes.style.transform = `translateX(${desplazamiento}%)`;
+        }
+
+        setInterval(moverDerecha, 4000); // Cambia cada X segundos por cada 1000*(x)
+
+        // --------------------------------------------------
+
+        function mostrarFechaHora() {
+            const ahora = new Date();
+            const opciones = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const fechaHoraFormateada = ahora.toLocaleString('es-ES', opciones);
+            document.getElementById('fecha-hora').textContent = fechaHoraFormateada;
+        }
+
+        // Mostrar la fecha y hora al cargar la página
+        mostrarFechaHora();
+
+        // Actualizar cada segundo
+        setInterval(mostrarFechaHora, 1000);
+    </script>
+</body>
+
+</html>
